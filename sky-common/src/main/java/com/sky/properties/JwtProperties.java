@@ -12,9 +12,9 @@ public class JwtProperties {
     /**
      * 管理端员工生成jwt令牌相关配置
      */
-    private String adminSecretKey;
-    private long adminTtl;
-    private String adminTokenName;
+    private String adminSecretKey;  //管理员端生成 JWT 令牌时使用的密钥
+    private long adminTtl;  //管理员端 JWT 令牌的有效时间（TTL，Time-To-Live），通常以秒为单位
+    private String adminTokenName; //管理员端 JWT 令牌在请求中的名称，通常是 HTTP 请求头中的 Authorization 或自定义的字段
 
     /**
      * 用户端微信用户生成jwt令牌相关配置

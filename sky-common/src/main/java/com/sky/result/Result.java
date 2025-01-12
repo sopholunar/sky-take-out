@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * 后端统一返回结果
+ * 用于 Web API 或服务的响应结果封装。通过使用泛型 T，该类可以返回不同类型的数据
  * @param <T>
  */
 @Data
