@@ -12,8 +12,8 @@ import java.io.Serializable;
 @Data
 public class Result<T> implements Serializable {
 
-    private Integer code; //编码：1成功，0和其它数字为失败
-    private String msg; //错误信息
+    private Integer code; //编码：1成功，0和其它数字为失败code 用于表示响应的状态码。这个字段可以根据实际需要扩展，如 200 表示成功，400 表示客户端请求错误，500 表示服务器内部错误等。
+    private String msg; //错误信息，若请求成功，这个字段可能为空或包含一些说明信息；若请求失败，则可以包含具体的错误描述，如“参数不合法”，“数据库连接失败”等。
     private T data; //数据
 
     public static <T> Result<T> success() {

@@ -22,7 +22,7 @@ public class JwtUtil {
         // 指定签名的时候使用的签名算法，也就是header那部分
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 
-        // 生成JWT的时间
+        // 生成JWT的时间 + 过期时间段
         long expMillis = System.currentTimeMillis() + ttlMillis;
         Date exp = new Date(expMillis);
 
